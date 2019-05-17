@@ -2,6 +2,8 @@ describe('avoxi cart', () => {
 
     it('testproject site', () => {
         cy.visit('https://blog.testproject.io/2017/06/07/javascript-testing-with-selenium-webdriver-mocha/')
+        cy.title().should('eq', 'Javascript Testing with Selenium Webdriver and Mocha - TestProject')
+
     })
 
     it('scroll to the bootom of the page and select ', () => {
@@ -9,11 +11,12 @@ describe('avoxi cart', () => {
         // cy.wait(3000)
         cy.get('[id="colophon"]').should('be.visible')
         // cy.viewport(500, 500)
-        cy.wait(3000)
+        // cy.wait(3000)
 
         cy.get('#menu-item-1397 > a')
         cy.get('.block-bg-overlay').click()
         cy.get('#menu-item-4866 > a').click()
+
         // cy.get('.header > .container > .row > .col-md-8 > .header__hero-btns > .button-orange').click()
     })
 
